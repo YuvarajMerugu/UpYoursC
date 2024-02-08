@@ -13,15 +13,40 @@ const FooterBanner = () => {
         </div>
         <div className='foot-banner'>
           <div className="banner-descc">
-            <div className="left m-5">
+            <div className="left m-5 foot-logo">
 
               <Link href="/"><img src="/favicon.ico" alt="eatwell" width="100" height="100" /></Link>
             </div>
-            <div className="left m-5">
-              Currently we are Located at:
+            <div className="left m-5 location">
+              <div>
+                Currently we are Located at:
+              </div>
+              <div>
+                In Hyderabad:
+              </div>
+              <div>
+                Kompally
+              </div>
+              <div>
+                Pragathinagar
+              </div>
+              <div>
+                Madinaguda
+              </div>
+              <div>
+                Begumpet
+              </div>
             </div>
-            <div className="left m-5">
+            <div className="left m-5 contact">
+            <div>
               Contact us:
+              </div>
+              <div>
+                +91 8184850111
+              </div>
+              <div>
+                +91 8790805543
+              </div>
             </div>
             <div className="right m-5">
               This is right

@@ -71,7 +71,7 @@ a {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 15s linear infinite;
+  animation: marquee 25s linear infinite;
   width: 180%;
 }
 
@@ -381,6 +381,44 @@ span.text-red {
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+.location>div {
+  padding: 5px;
+  /* Add padding */
+  margin: 5px 0;
+  /* Add margin */
+  font-size: 16px;
+  /* Set font size */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot-logo {
+  padding-left: 25%;
+  padding-top: 25%;
+}
+
+.contact>div {
+  padding: 5px;
+  /* Add padding */
+  margin: 5px 0;
+  /* Add margin */
+  font-size: 16px;
+  /* Set font size */
+}
+
+.location>div:nth-child(n+3) {
+  padding-left: 20px;
+  /* Add left padding for Kompally, Pragathinagar, Madinaguda, and Begumpet */
 }
 
 .banner-desc .left h3 {
@@ -857,6 +895,7 @@ span.text-red {
     top: 6%;
     height: 56%
   }
+
 
   .banner-desc .left h3 {
     font-weight: 900;
