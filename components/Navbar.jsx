@@ -7,11 +7,11 @@ import { Cart } from './';
 import { useStateContext } from '../context/StateContext';
 
 const Navbar = () => {
-  const { showCart, setShowCart } = useStateContext();
 
   return (
     <div className="navbar-container">
       <p className="logo">
+        <img src="/favicon.ico" alt="eatwell" width="32" height="32" />
         <Link href="/">EAT WELL</Link>
       </p>
       <p className="logo cursor-change">
@@ -23,7 +23,6 @@ const Navbar = () => {
         </Link>
       </p>
 
-      {showCart && <Cart />}
     </div>
   )
 }

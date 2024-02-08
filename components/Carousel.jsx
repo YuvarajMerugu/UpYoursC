@@ -10,7 +10,7 @@ const Carousel = ({ heroBanners }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       sliderRef.current.slickNext();
-    }, 10000); // Change slide every 3 seconds
+    }, 7000); // Change slide every 7 seconds
 
     return () => clearInterval(interval);
   }, []);

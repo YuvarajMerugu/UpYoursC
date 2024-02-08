@@ -15,7 +15,8 @@ const WarmBowl = ({ warmbowl: { image, name, slug, price, calories, highlight } 
                         className="product-image"
                     />
                     <p className="product-name">{name}</p>
-                    <p className="extra-info">{calories}&nbsp;{highlight}</p>
+                    {highlight && <p className="extra-info">{calories}&nbsp;|&nbsp;{highlight}</p>}
+                    {!highlight && <p className="extra-info">{calories}</p>}
 
 
                     <p className="product-price">₹{price}</p>

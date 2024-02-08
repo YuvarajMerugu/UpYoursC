@@ -5,16 +5,41 @@ import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
+function parseNutritionInfo(inputString) {
+    // If inputString is empty, return an empty array
+    if (!inputString) return [];
+
+    // Split the input string by newline character to get individual lines
+    const lines = inputString.split(',');
+
+    // Initialize an empty array to store the parsed details
+    const detailsArray = [];
+
+    // Iterate over each line and extract the details
+    lines.forEach(line => {
+        // Split each line by '-' to separate the key and value
+        const [key, value] = line.split('-');
+
+        // Trim whitespace from key and value
+        const trimmedKey = key.trim();
+        const trimmedValue = value.trim();
+
+        // Push key and value into the detailsArray
+        detailsArray.push(trimmedKey, trimmedValue);
+    });
+
+    return detailsArray;
+}
+
+
 const PowerLifterDetails = ({ product, products }) => {
-    const { image, name, details, price, calories, fat, saturatedFat, transFat, sodium, carbs, fiber, sugars, protein, highlight } = product;
+    const { image, name, details, price, calories, highlight, nutritionFact, ingredients } = product;
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+    const parsedDetails = parseNutritionInfo(nutritionFact);
+    const parsedIngredients = parseNutritionInfo(ingredients);
 
-    const handleBuyNow = () => {
-        onAdd(product, qty);
 
-        setShowCart(true);
-    }
 
     return (
         <div>
@@ -38,30 +63,32 @@ const PowerLifterDetails = ({ product, products }) => {
                 <div className="product-detail-desc">
                     <h1>{name}</h1>
 
-                    <p>{calories}&nbsp;{highlight}</p>
+                    {highlight && <p>{calories}&nbsp;|&nbsp;{highlight}</p>}
+                    {!highlight && <p>{calories}</p>}
+                    <p className="price-display">₹{price}</p>
 
                     <h4>Nutrition Facts: </h4>
                     <div className="products-containerss">
-                        <p >Fat &nbsp;</p>
-                        <p >{fat}</p>
-                        <p >Saturated Fat&nbsp; </p>
-                        <p >{saturatedFat}</p>
-                        <p >Trans Fat&nbsp; </p>
-                        <p >{transFat}</p>
-                        <p >Sodium&nbsp; </p>
-                        <p >{sodium}</p>
-                        <p>Carbs&nbsp; </p>
-                        <p>{carbs}</p>
-                        <p>Fiber&nbsp; </p>
-                        <p>{fiber}</p>
-                        <p >Sugars&nbsp; </p>
-                        <p >{sugars}</p>
-                        <p >Protein&nbsp; </p>
-                        <p >{protein}</p>
+                        {parsedDetails.map((detail, index) => (
+                            <div key={index}>
+                                <p style={{ fontWeight: index % 2 === 1 ? 'bold' : 'normal' }}>{detail}&nbsp;&nbsp;</p>
+                            </div>
+                        ))}
+
                     </div>
-                    <h4>List of Ingredients: </h4>
+
+                    <div className="products-containerss">
+                        {parsedIngredients.map((detail, index) => (
+                            <div key={index}>
+                                <p style={{ fontWeight: index % 2 === 1 ? 'bold' : 'normal' }}>{detail}&nbsp;&nbsp;</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {details && <h4>Details:</h4>}
+
                     <p>{details}</p>
-                    <p className="price-display">₹{price}</p>
+
 
 
                 </div>
@@ -110,7 +137,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
     const product = await client.fetch(query);
     const products = await client.fetch(productsQuery);
 
-    console.log(product);
 
     return {
         props: { products, product }

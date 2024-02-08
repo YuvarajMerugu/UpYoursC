@@ -3,31 +3,34 @@ import Link from 'next/link';
 
 import { urlFor } from '../lib/client';
 
-const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTime, smallText, midText, desc, product, buttonText, image } }) => {
+const FooterBanner = () => {
   return (
     <div className="footer-banner-container">
-      <div className="banner-desc">
-        <div className="left">
-          <p>{discount}</p>
-          <h3>{largeText1}</h3>
-          <h3>{largeText2}</h3>
-          <p>{saleTime}</p>
+      <div className="banner-content">
+        <div className="about-us">
+          <h2 className="about-us-head">About Us</h2>
+          <p className="about-us-main">At Eat Well, we're passionate about providing gym enthusiasts with a delectable selection of nutritious options, meticulously curated to support your fitness goals and keep you performing at your best!</p>
         </div>
-        <div className="right">
-          <p>{smallText}</p>
-          <h3>{midText}</h3>
-          <p>{desc}</p>
-          <Link href={`/product/${product}`}>
-            <button type="button">{buttonText}</button>
-          </Link>
-        </div>
+        <div className='foot-banner'>
+          <div className="banner-descc">
+            <div className="left m-5">
 
-        <img 
-          src={urlFor(image)} className="footer-banner-image"
-        />
+              <Link href="/"><img src="/favicon.ico" alt="eatwell" width="100" height="100" /></Link>
+            </div>
+            <div className="left m-5">
+              Currently we are Located at:
+            </div>
+            <div className="left m-5">
+              Contact us:
+            </div>
+            <div className="right m-5">
+              This is right
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FooterBanner
+export default FooterBanner;
