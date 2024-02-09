@@ -20,11 +20,12 @@ const Carousel = ({ heroBanners }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: false,
   };
 
   return (
-    <Slider ref={sliderRef} {...settings}>
+    <Slider ref={sliderRef} {...settings} >
       {heroBanners.map((heroBanner, index) => (
         <div key={index}>
           {heroBanner && <HeroBanner heroBanner={heroBanner} />}
