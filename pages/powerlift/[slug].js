@@ -76,7 +76,7 @@ const PowerLifterDetails = ({ product, products }) => {
                         ))}
 
                     </div>
-
+                    {parsedIngredients.length > 0 && <h4>List of Ingredients: </h4>}
                     <div className="products-containerss">
                         {parsedIngredients.map((detail, index) => (
                             <div key={index}>

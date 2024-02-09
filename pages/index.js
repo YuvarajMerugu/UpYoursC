@@ -11,14 +11,6 @@ const Home = ({ products, bannerData, freshjuiceData, specialData, pancakesData,
 
     <Carousel heroBanners={bannerData} />
 
-    <div className="products-heading">
-      <h2>Best Seller Products</h2>
-      <p>speaker There are many variations passages</p>
-    </div>
-
-    <div className="products-container">
-      {products?.map((product) => <Product key={product._id} product={product} />)}
-    </div>
 
     <div className="products-heading">
       <h2>Fresh Juices</h2>

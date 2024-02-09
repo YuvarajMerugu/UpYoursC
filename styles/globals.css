@@ -71,7 +71,7 @@ a {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 25s linear infinite;
+  animation: marquee 20s linear infinite;
   width: 180%;
 }
 
@@ -211,6 +211,7 @@ span.text-red {
   font-size: 20px;
 }
 
+
 .hero-banner-container button {
   border-radius: 15px;
   padding: 10px 16px;
@@ -227,6 +228,7 @@ span.text-red {
 .hero-banner-container h3 {
   font-size: 4rem;
   margin-top: 4px;
+  margin-left: -20px;
 }
 
 .hero-banner-container h1 {
@@ -239,7 +241,7 @@ span.text-red {
 .hero-banner-image {
   position: absolute;
   top: 0%;
-  right: 20%;
+  right: 10%;
   width: 450px;
   height: 450px;
   border-radius: 15px;
@@ -295,11 +297,23 @@ span.text-red {
   background-color: #f02d34;
   border-radius: 15px;
   position: relative;
-  height: 400px;
+  height: 470px;
   line-height: 1;
   color: white;
   width: 100%;
   margin-top: 120px;
+}
+
+.footer-banner-containerr {
+  padding: 20px 20px;
+  background-color: #f02d34;
+  border-radius: 15px;
+  position: relative;
+  height: 470px;
+  line-height: 1;
+  color: white;
+  width: 100%;
+
 }
 
 .banner-content {
@@ -480,13 +494,23 @@ span.text-red {
 }
 
 .footer-container {
-  color: #324d67;
   text-align: center;
-  margin-top: 20px;
-  padding: 30px 10px;
-  font-weight: 700;
+  margin-top: 1px;
+  padding: 15px 10px;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+
+}
+
+.footer-cont {
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
   justify-content: center;
@@ -874,19 +898,24 @@ span.text-red {
 
 @media screen and (max-width:800px) {
   .hero-banner-container {
-    height: 560px;
+    height: 490px;
   }
 
   .hero-banner-image {
-    width: 77%;
+    width: 70%;
     height: 62%;
     top: -2%;
     right: -6%;
   }
 
   .footer-banner-container {
-    height: 560px;
+    height: 950px;
     margin-top: 80px;
+  }
+
+  .footer-banner-containerr {
+    height: 950px;
+
   }
 
   .footer-banner-image {

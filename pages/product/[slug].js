@@ -15,15 +15,15 @@ function parseNutritionInfo(inputString) {
 
   // Iterate over each line and extract the details
   lines.forEach(line => {
-      // Split each line by '-' to separate the key and value
-      const [key, value] = line.split('-');
+    // Split each line by '-' to separate the key and value
+    const [key, value] = line.split('-');
 
-      // Trim whitespace from key and value
-      const trimmedKey = key.trim();
-      const trimmedValue = value.trim();
+    // Trim whitespace from key and value
+    const trimmedKey = key.trim();
+    const trimmedValue = value.trim();
 
-      // Push key and value into the detailsArray
-      detailsArray.push(trimmedKey, trimmedValue);
+    // Push key and value into the detailsArray
+    detailsArray.push(trimmedKey, trimmedValue);
   });
 
   return detailsArray;
@@ -74,8 +74,8 @@ const ProductDetails = ({ product, products }) => {
             ))}
 
           </div>
-            {parsedIngredients && <h4>List of Ingredients: </h4>}
-          
+          {parsedIngredients.length > 0 && <h4>List of Ingredients: </h4>}
+
           <div className="products-containerss">
             {parsedIngredients.map((detail, index) => (
               <div key={index}>

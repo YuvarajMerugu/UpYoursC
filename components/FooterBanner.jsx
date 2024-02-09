@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { urlFor } from '../lib/client';
 
 const FooterBanner = () => {
@@ -38,8 +38,8 @@ const FooterBanner = () => {
               </div>
             </div>
             <div className="left m-5 contact">
-            <div>
-              Contact us:
+              <div>
+                Contact us:
               </div>
               <div>
                 +91 8184850111
@@ -52,8 +52,21 @@ const FooterBanner = () => {
               This is right
             </div>
           </div>
+
         </div>
+
+        <div className='footer-container'>
+          <p>Copyright © 2024 EatWell. All Rights Reserved.</p>
+          <p className='footer-cont'>Follow us on
+            <p className="icons">
+              <a href="https://www.instagram.com/eatw.ell9" target='_blank'><AiOutlineInstagram /></a>
+            </p>
+          </p>
+
+        </div>
+
       </div>
+
     </div>
   );
 };
