@@ -213,6 +213,7 @@ span.text-red {
 .hero-banner-container .beats-solo {
   font-size: 20px;
 }
+
 .slick-next {
   right: 0;
 }
@@ -355,6 +356,21 @@ span.text-red {
   padding: 10px;
 }
 
+@media screen and (max-width: 800px) {
+  .m-5 {
+    margin: 3px;
+    /* Adjust margin */
+    padding: 3px;
+    /* Adjust padding */
+  }
+
+  .location>div,
+  .contact>div .social>div {
+    font-size: 14px;
+    /* Reduce font size */
+  }
+}
+
 
 
 .banner-desc {
@@ -378,7 +394,7 @@ span.text-red {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
-    gap: 10px;
+    gap: 1px;
   }
 }
 
@@ -387,6 +403,16 @@ span.text-red {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .m-5,
+  .location,
+  .contact,
+  .social {
+    text-align: center;
   }
 }
 
@@ -421,12 +447,38 @@ span.text-red {
   flex-direction: column;
 }
 
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
 .foot-logo {
-  padding-left: 25%;
-  padding-top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* Adjust width as needed */
+  height: 100%;
+  /* Adjust height as needed */
+}
+
+.foot-logo img {
+  width: 200px;
+  /* Set the width */
+  height: 200px;
+  /* Set the height */
 }
 
 .contact>div {
+  padding: 5px;
+  /* Add padding */
+  margin: 5px 0;
+  /* Add margin */
+  font-size: 16px;
+  /* Set font size */
+}
+
+.social>div {
   padding: 5px;
   /* Add padding */
   margin: 5px 0;
@@ -903,14 +955,14 @@ span.text-red {
 
 @media screen and (max-width:800px) {
   .hero-banner-container {
-    height: 490px;
+    height: 460px;
   }
 
   .hero-banner-image {
-    width: 70%;
+    width: 60%;
     height: 62%;
-    top: -2%;
-    right: -6%;
+    top: 10%;
+    right: -5%;
   }
 
   .footer-banner-container {

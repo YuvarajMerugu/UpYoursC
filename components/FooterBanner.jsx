@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
 import { urlFor } from '../lib/client';
 
 const FooterBanner = () => {
@@ -48,8 +48,18 @@ const FooterBanner = () => {
                 +91 8790805543
               </div>
             </div>
-            <div className="right m-5">
-              This is right
+            <div className="right m-5 social">
+              <div>For Any queries:</div>
+              <div>
+                <a href='https://wa.me/8184850111?text=I%20want%20%to%order.' target='_blank'>
+                  <AiOutlineWhatsApp /> Whatsapp
+                </a>
+              </div>
+              <div>
+                <a href="https://www.instagram.com/eatw.ell9" target='_blank'>
+                  <AiOutlineInstagram /> Instagram
+                </a>
+              </div>
             </div>
           </div>
 
