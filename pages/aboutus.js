@@ -18,7 +18,7 @@ const AboutUs = () => {
                             <Link href="/"><img src="/favicon.ico" alt="eatwell" width="100" height="100" /></Link>
                         </div>
                         <div className="left m-5 location">
-                            <div>
+                            <div className='weightt'>
                                 Currently we are Located at:
                             </div>
                             <div>
@@ -38,7 +38,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                         <div className="left m-5 contact">
-                            <div>
+                            <div className='weightt'>
                                 Contact us:
                             </div>
                             <div>
@@ -49,7 +49,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                         <div className="right m-5 social">
-                            <div>For Any queries:</div>
+                            <div className='weightt'>For Any queries:</div>
                             <div>
                                 <a href='https://wa.me/8184850111?text=I%20want%20%to%order.' target='_blank'>
                                     <AiOutlineWhatsApp /> Whatsapp
