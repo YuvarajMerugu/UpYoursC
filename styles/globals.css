@@ -74,7 +74,7 @@ a {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
   width: 180%;
 }
 
