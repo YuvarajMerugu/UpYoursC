@@ -11,6 +11,14 @@ const Home = ({ products, bannerData, freshjuiceData, specialData, pancakesData,
 
     <Carousel heroBanners={bannerData} />
 
+    <div className="products-heading">
+      <h2>Warm Bowls</h2>
+      <p>A cozy embrace of flavors, filling every spoonful.</p>
+    </div>
+    <div className="products-container">
+      {warmbowlsData?.map((warmbowl) => <WarmBowl key={warmbowl._id} warmbowl={warmbowl} />)}
+    </div>
+
 
     <div className="products-heading">
       <h2>Fresh Juices</h2>
@@ -29,6 +37,14 @@ const Home = ({ products, bannerData, freshjuiceData, specialData, pancakesData,
     </div>
 
     <div className="products-heading">
+      <h2>Power Lifter Special</h2>
+      <p>Fuel your strength with protein-packed, energizing dishes.</p>
+    </div>
+    <div className="products-container">
+      {powerlifterData?.map((powerlift) => <PowerLift key={powerlift._id} powerlift={powerlift} />)}
+    </div>
+
+    <div className="products-heading">
       <h2>Pancakes</h2>
       <p>A symphony of taste in every stack.</p>
     </div>
@@ -44,21 +60,9 @@ const Home = ({ products, bannerData, freshjuiceData, specialData, pancakesData,
       {sandwichesData?.map((sandwich) => <Sandwich key={sandwich._id} sandwich={sandwich} />)}
     </div>
 
-    <div className="products-heading">
-      <h2>Warm Bowls</h2>
-      <p>A cozy embrace of flavors, filling every spoonful.</p>
-    </div>
-    <div className="products-container">
-      {warmbowlsData?.map((warmbowl) => <WarmBowl key={warmbowl._id} warmbowl={warmbowl} />)}
-    </div>
 
-    <div className="products-heading">
-      <h2>Power Lifter Special</h2>
-      <p>Fuel your strength with protein-packed, energizing dishes.</p>
-    </div>
-    <div className="products-container">
-      {powerlifterData?.map((powerlift) => <PowerLift key={powerlift._id} powerlift={powerlift} />)}
-    </div>
+
+
 
     <FooterBanner />
   </div>
