@@ -178,7 +178,7 @@ span.text-red {
 
 .products-containerss {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .product-card {
@@ -296,7 +296,7 @@ span.text-red {
 .products-heading {
   text-align: center;
   margin: 40px 0px;
-  color: #324d67;
+  color: #612df0;
 
 }
 

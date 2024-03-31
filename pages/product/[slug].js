@@ -14,19 +14,19 @@ function parseNutritionInfo(inputString) {
   const detailsArray = [];
 
   // Iterate over each line and extract the details
-  lines.forEach(line => {
-    // Split each line by '-' to separate the key and value
-    const [key, value] = line.split('-');
+  // lines.forEach(line => {
+  //   // Split each line by '-' to separate the key and value
+  //   const [key, value] = line.split('-');
 
-    // Trim whitespace from key and value
-    const trimmedKey = key.trim();
-    const trimmedValue = value.trim();
+  //   // Trim whitespace from key and value
+  //   const trimmedKey = key.trim();
+  //   const trimmedValue = value.trim();
 
-    // Push key and value into the detailsArray
-    detailsArray.push(trimmedKey, trimmedValue);
-  });
+  //   // Push key and value into the detailsArray
+  //   detailsArray.push(trimmedKey, trimmedValue);
+  // });
 
-  return detailsArray;
+  return lines;
 }
 
 
@@ -35,7 +35,9 @@ const ProductDetails = ({ product, products }) => {
   const { image, name, details, price, calories, highlight, nutritionFact, ingredients } = product;
   const [index, setIndex] = useState(0);
   const parsedDetails = parseNutritionInfo(nutritionFact);
+  console.log(parsedDetails)
   const parsedIngredients = parseNutritionInfo(ingredients);
+  console.log(parsedIngredients)
 
 
 
@@ -65,16 +67,16 @@ const ProductDetails = ({ product, products }) => {
           {!highlight && <p>{calories}</p>}
           <p className="price-display">₹{price}</p>
 
-          
-          
-          
+
+
+
           {details && <h4>Details:</h4>}
 
           <p>{details}</p>
           <div className="products-containerss">
-            {parsedDetails.map((detail, index) => (
+            {parsedIngredients.map((detail, index) => (
               <div key={index}>
-                <p style={{ fontWeight: index % 2 === 1 ? 'bold' : 'normal' }}>{detail}&nbsp;&nbsp;</p>
+                <p style={{}}>{detail}&nbsp;&nbsp;</p>
               </div>
             ))}
 
