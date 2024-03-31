@@ -40,7 +40,7 @@ const specialDetails = ({ product, products }) => {
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
     const parsedDetails = parseNutritionInfo(nutritionFact);
     const parsedIngredients = parseNutritionInfo(ingredients);
-    
+
 
 
     return (
@@ -69,7 +69,12 @@ const specialDetails = ({ product, products }) => {
                     {!highlight && <p>{calories}</p>}
                     <p className="price-display">₹{price}</p>
 
-                    <h4>Nutrition Facts: </h4>
+
+
+
+                    {details && <h4>Details:</h4>}
+
+                    <p>{details}</p>
                     <div className="products-containerss">
                         {parsedDetails.map((detail, index) => (
                             <div key={index}>
@@ -77,19 +82,6 @@ const specialDetails = ({ product, products }) => {
                             </div>
                         ))}
                     </div>
-
-                    <h4>List of Ingredients: </h4>
-                    <div className="products-containerss">
-                        {parsedIngredients.map((detail, index) => (
-                            <div key={index}>
-                                <p style={{ fontWeight: index % 2 === 1 ? 'bold' : 'normal' }}>{detail}&nbsp;&nbsp;</p>
-                            </div>
-                        ))}
-                    </div>
-                    {details && <h4>Details:</h4>}
-
-                    <p>{details}</p>
-
 
                 </div>
             </div>

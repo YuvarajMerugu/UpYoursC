@@ -9,9 +9,9 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Head>
-        <title>EatWell</title>
+        <title>UpYoursC</title>
       </Head>
-      <header>
+      <header className='color-bb'>
         <Navbar />
         <Shadow />
       </header>

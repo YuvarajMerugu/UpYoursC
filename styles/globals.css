@@ -52,6 +52,14 @@ a {
   position: relative;
 }
 
+.color-bb {}
+
+.iconn {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
 .shadow {
   position: relative;
   width: 100%;
@@ -304,7 +312,7 @@ span.text-red {
 
 .footer-banner-container {
   padding: 50px 40px;
-  background-color: #f02d34;
+  background-color: #612df0;
   border-radius: 15px;
   position: relative;
   height: 470px;

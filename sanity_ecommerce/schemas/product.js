@@ -32,6 +32,11 @@ export default {
       type: 'number',
     },
     {
+      name: 'ingredients',
+      title: 'Ingredients',
+      type: 'string',
+    },
+    {
       name: 'calories',
       title: 'Calories',
       type: 'string',
@@ -39,16 +44,6 @@ export default {
     {
       name: 'highlight',
       title: 'Highlight',
-      type: 'string',
-    },
-    {
-      name: 'nutritionFact',
-      title: 'NutritionFact',
-      type: 'string',
-    },
-    {
-      name: 'ingredients',
-      title: 'Ingredients',
       type: 'string',
     },
     {

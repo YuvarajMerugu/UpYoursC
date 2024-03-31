@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "eatwell"
+    "name": "upyoursc"
   },
   "api": {
-    "projectId": "iucwfuj4",
+    "projectId": "j25ebzge",
     "dataset": "production"
   },
   "plugins": [

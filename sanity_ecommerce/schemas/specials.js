@@ -37,18 +37,13 @@ export default {
       type: 'string',
     },
     {
-      name: 'highlight',
-      title: 'Highlight',
-      type: 'string',
-    },
-    {
-      name: 'nutritionFact',
-      title: 'NutritionFact',
-      type: 'string',
-    },
-    {
       name: 'ingredients',
       title: 'Ingredients',
+      type: 'string',
+    },
+    {
+      name: 'highlight',
+      title: 'Highlight',
       type: 'string',
     },
     {

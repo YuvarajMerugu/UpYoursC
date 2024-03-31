@@ -65,7 +65,12 @@ const ProductDetails = ({ product, products }) => {
           {!highlight && <p>{calories}</p>}
           <p className="price-display">₹{price}</p>
 
-          <h4>Nutrition Facts: </h4>
+          
+          
+          
+          {details && <h4>Details:</h4>}
+
+          <p>{details}</p>
           <div className="products-containerss">
             {parsedDetails.map((detail, index) => (
               <div key={index}>
@@ -74,18 +79,6 @@ const ProductDetails = ({ product, products }) => {
             ))}
 
           </div>
-          {parsedIngredients.length > 0 && <h4>List of Ingredients: </h4>}
-
-          <div className="products-containerss">
-            {parsedIngredients.map((detail, index) => (
-              <div key={index}>
-                <p style={{ fontWeight: index % 2 === 1 ? 'bold' : 'normal' }}>{detail}&nbsp;&nbsp;</p>
-              </div>
-            ))}
-          </div>
-          {details && <h4>Details:</h4>}
-
-          <p>{details}</p>
 
 
 
