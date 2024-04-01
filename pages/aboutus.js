@@ -31,7 +31,7 @@ const FooterBanner = () => {
                         <div className="right m-5 social">
                             <div className='weightt'>For Any queries:</div>
                             <div>
-                                <a href='https://wa.me/7780186920?text=I%20want%20%to%order.' target='_blank'>
+                                <a href='https://chat.whatsapp.com/I5VcP2RAQ9u7QwoJ5tXxMX' target='_blank'>
                                     <AiOutlineWhatsApp /> Whatsapp
                                 </a>
                             </div>
