@@ -41,7 +41,7 @@ const FooterBanner = () => {
                 </a>
               </div>
               <div>
-                <a href="https://www.instagram.com/eatw.ell9" target='_blank'>
+                <a href="mailto: contact@upyoursc.com" target='_blank'>
                   <AiOutlineMail /> Email
                 </a>
               </div>
@@ -54,7 +54,7 @@ const FooterBanner = () => {
           <p>Copyright © 2024 UpYoursC. All Rights Reserved.</p>
           <p className='footer-cont'>Follow us on
             <p className="icons">
-              <a href="https://www.instagram.com/eatw.ell9" target='_blank'><AiOutlineLinkedin /></a>
+              <a href="https://www.linkedin.com/company/upyoursc/" target='_blank'><AiOutlineLinkedin /></a>
             </p>
           </p>
 

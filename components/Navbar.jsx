@@ -16,12 +16,12 @@ const Navbar = () => {
       </p>
       <p className="logo cursor-change">
         <div>
-          <a href='' target='_blank' >
+          <a href='https://www.linkedin.com/company/upyoursc/' target='_blank' >
             <AiFillLinkedin className='iconn' onMouseOver={({ target }) => target.style.color = "blue"} onMouseOut={({ target }) => target.style.color = "black"} />
           </a>
         </div>
         <div>
-          <a href='' target='_blank'>
+          <a href='mailto: contact@upyoursc.com' target='_blank'>
             <AiTwotoneMail className='iconn' onMouseOver={({ target }) => target.style.color = "blue"} onMouseOut={({ target }) => target.style.color = "black"} />
           </a>
         </div>
