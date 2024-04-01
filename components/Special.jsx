@@ -6,7 +6,7 @@ import { urlFor } from '../lib/client';
 const Special = ({ special: { image, name, slug, price, calories, highlight } }) => {
     return (
         <div>
-            <Link href={`/special/${slug.current}`}>
+            
                 <div className="product-card">
                     <img
                         src={urlFor(image && image[0])}
@@ -17,11 +17,8 @@ const Special = ({ special: { image, name, slug, price, calories, highlight } })
                     <p className="product-name">{name}</p>
                     {highlight && <p className="extra-info">{calories}&nbsp;|&nbsp;{highlight}</p>}
                     {!highlight && <p className="extra-info">{calories}</p>}
-
-
-                    <p className="product-price">₹{price}</p>
                 </div>
-            </Link>
+            
         </div>
     )
 }
